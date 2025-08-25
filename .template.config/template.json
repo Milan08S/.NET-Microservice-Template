@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Tu Nombre",
+  "classifications": [ "Web", "API", "Microservice", "Docker" ],
+  "identity": "MiPlantilla.Microservicio.CSharp",
+  "name": "Microservicio con Arquitectura Limpia y Docker", 
+  "shortName": "mimicro",
+  "sourceName": "PlantillaMicroservicio",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
