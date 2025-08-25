@@ -1,0 +1,10 @@
+# Archivos de configuración de usuario y IDE
+**/.vscode
+**/.vs
+**/.idea
+*/bin
+*/obj
+
+# Archivos de Docker
+Dockerfile*
+.dockerignore
