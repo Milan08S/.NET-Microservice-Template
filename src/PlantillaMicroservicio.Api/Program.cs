@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PlantillaMicroservicio.Application.Interfaces;
-using PlantillaMicroservicio.Application.Services;
+using PlantillaMicroservicio.Application.Features.Products;
 using PlantillaMicroservicio.Domain.Interfaces;
 using PlantillaMicroservicio.Infrastructure.Data;
 using PlantillaMicroservicio.Infrastructure.Data.Repositories;

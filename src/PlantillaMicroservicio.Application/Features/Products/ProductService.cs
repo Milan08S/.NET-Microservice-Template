@@ -1,8 +1,8 @@
-﻿using PlantillaMicroservicio.Application.Interfaces;
-using PlantillaMicroservicio.Domain.Interfaces;
+﻿using PlantillaMicroservicio.Domain.Interfaces;
 using PlantillaMicroservicio.Domain.Entities;
+using PlantillaMicroservicio.Application.Features.Products.DTOs;
 
-namespace PlantillaMicroservicio.Application.Services;
+namespace PlantillaMicroservicio.Application.Features.Products;
 
 public class ProductService : IProductService
 {
@@ -14,9 +14,23 @@ public class ProductService : IProductService
         _productRepository = productRepository;
     }
 
-    public async Task<Product?> GetProductByIdAsync(int id)
+    public async Task<ProductDto?> GetProductByIdAsync(int id)
     {
-        return await _productRepository.GetByIdAsync(id);
+        var productEntity = await _productRepository.GetByIdAsync(id);
+
+        if (productEntity == null)
+        {
+            return null;
+        }
+
+        var productDto = new ProductDto
+        {
+            Id = productEntity.Id,
+            Name = productEntity.Name,
+            Price = productEntity.Price
+        };
+
+        return productDto;
     }
 
     public async Task<IEnumerable<Product>> GetAllProductsAsync()
@@ -24,7 +38,7 @@ public class ProductService : IProductService
         return await _productRepository.GetAllAsync();
     }
 
-    public async Task AddProductAsync(Product product)
+    public async Task AddProductAsync(Product product)         
     {
         if (product.Price < 0)
         {

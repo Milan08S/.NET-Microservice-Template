@@ -1,6 +1,6 @@
 ﻿using PlantillaMicroservicio.Domain.Entities;
-namespace PlantillaMicroservicio.Application.Interfaces;
 
+namespace PlantillaMicroservicio.Application.Features.Products;
 public interface IProductService
 {
     Task<Product?> GetProductByIdAsync(int id);

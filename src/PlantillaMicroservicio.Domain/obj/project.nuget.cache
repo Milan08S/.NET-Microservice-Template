@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6j5pJEeR+/o=",
+  "dgSpecHash": "qxuFsZ7gcnw=",
   "success": true,
-  "projectFilePath": "D:\\Proyectos\\Plantilla\\PlantillaMicroservicio\\src\\PlantillaMicroservicio.Domain\\PlantillaMicroservicio.Domain.csproj",
+  "projectFilePath": "D:\\Users\\LENOVO\\Documents\\Plantillas\\.NET-Microservice-Template\\src\\PlantillaMicroservicio.Domain\\PlantillaMicroservicio.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

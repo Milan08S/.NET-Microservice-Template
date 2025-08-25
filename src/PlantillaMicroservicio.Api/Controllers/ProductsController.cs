@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlantillaMicroservicio.Application.Interfaces;
+using PlantillaMicroservicio.Application.Features.Products;
 using PlantillaMicroservicio.Domain.Entities;
 
 namespace PlantillaMicroservicio.Api.Controllers;
