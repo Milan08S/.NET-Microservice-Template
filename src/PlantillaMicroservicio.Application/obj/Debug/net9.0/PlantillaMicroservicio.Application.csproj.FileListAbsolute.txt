@@ -28,3 +28,4 @@ D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Applica
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Application\obj\Debug\net9.0\refint\PlantillaMicroservicio.Application.dll
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Application\obj\Debug\net9.0\PlantillaMicroservicio.Application.pdb
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Application\obj\Debug\net9.0\ref\PlantillaMicroservicio.Application.dll
+D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Application\obj\Debug\net9.0\PlantillaMicroservicio.Application.sourcelink.json

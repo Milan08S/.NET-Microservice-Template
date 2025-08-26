@@ -276,3 +276,4 @@ D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Api\obj
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Api\obj\Debug\net9.0\PlantillaMicroservicio.Api.pdb
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Api\obj\Debug\net9.0\PlantillaMicroservicio.Api.genruntimeconfig.cache
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Api\obj\Debug\net9.0\ref\PlantillaMicroservicio.Api.dll
+D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Api\obj\Debug\net9.0\PlantillaMicroservicio.Api.sourcelink.json

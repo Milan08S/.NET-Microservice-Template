@@ -36,3 +36,4 @@ D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Infrast
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Infrastructure\obj\Debug\net9.0\PlantillaMicroservicio.Infrastructure.pdb
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Infrastructure\obj\Debug\net9.0\PlantillaMicroservicio.Infrastructure.genruntimeconfig.cache
 D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Infrastructure\obj\Debug\net9.0\ref\PlantillaMicroservicio.Infrastructure.dll
+D:\Proyectos\Plantilla\PlantillaMicroservicio\src\PlantillaMicroservicio.Infrastructure\obj\Debug\net9.0\PlantillaMicroservicio.Infrastructure.sourcelink.json
