@@ -1,5 +1,6 @@
 ﻿using PlantillaMicroservicio.Domain.Interfaces;
 using PlantillaMicroservicio.Domain.Entities;
+using PlantillaMicroservicio.Application.Features.Products;
 using PlantillaMicroservicio.Application.Features.Products.DTOs;
 
 namespace PlantillaMicroservicio.Application.Features.Products;
