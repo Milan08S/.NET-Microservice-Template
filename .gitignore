@@ -12,6 +12,11 @@
 **/[Oo]bj/
 **/[Ll]og/
 
+**/logs/
+
+**/bin/
+**/obj/
+
 # Visual Studio temporary files
 **/[Vv]isual [Ss]tudio */
 .vs/
