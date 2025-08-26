@@ -1,7 +1,8 @@
-﻿using PlantillaMicroservicio.Domain.Interfaces;
-using PlantillaMicroservicio.Domain.Entities;
-using PlantillaMicroservicio.Application.Features.Products;
+﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using PlantillaMicroservicio.Application.Features.Products.DTOs;
+using PlantillaMicroservicio.Domain.Entities;
+using PlantillaMicroservicio.Domain.Interfaces;
 
 namespace PlantillaMicroservicio.Application.Features.Products;
 
@@ -9,29 +10,33 @@ public class ProductService : IProductService
 {
 
     private readonly IProductRepository _productRepository;
+    private readonly IMapper _mapper;
+    private readonly ILogger<ProductService> _logger;
 
-    public ProductService(IProductRepository productRepository)
+    public ProductService(
+        IProductRepository productRepository, 
+        IMapper mapper,
+        ILogger<ProductService> logger
+    )
     {
         _productRepository = productRepository;
+        _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<ProductDto?> GetProductByIdAsync(int id)
     {
+        _logger.LogInformation("Searching product with ID {ProductId}", id);
+
         var productEntity = await _productRepository.GetByIdAsync(id);
 
         if (productEntity == null)
         {
+            _logger.LogWarning("Product with ID {ProductId} not found", id);
             return null;
         }
 
-        var productDto = new ProductDto
-        {
-            Id = productEntity.Id,
-            Name = productEntity.Name,
-            Price = productEntity.Price
-        };
-
-        return productDto;
+        return _mapper.Map<ProductDto>(productEntity);
     }
 
     public async Task<IEnumerable<Product>> GetAllProductsAsync()
@@ -39,14 +44,23 @@ public class ProductService : IProductService
         return await _productRepository.GetAllAsync();
     }
 
-    public async Task AddProductAsync(Product product)         
+    public async Task<int> AddProductAsync(CreateProductDto createProductDto)         
     {
-        if (product.Price < 0)
+        _logger.LogInformation("Adding new product with name {ProductName}", createProductDto.Name);
+
+        if (createProductDto.Price < 0)
         {
-            throw new ArgumentException("El precio del producto no puede ser negativo.");
+            _logger.LogWarning("Attempt to add product with negative price: {Price}", createProductDto.Price);
+            throw new ArgumentException("The price of the product cannot be negative.");
         }
 
-        await _productRepository.AddAsync(product);
+        var productEntity = _mapper.Map<Product>(createProductDto);
+
+        await _productRepository.AddAsync(productEntity);
+        
+        _logger.LogInformation("Product successfully added with ID {ProductId}", productEntity.Id);
+        
+        return productEntity.Id;
     }
 
     public async Task UpdateProductAsync(Product product)

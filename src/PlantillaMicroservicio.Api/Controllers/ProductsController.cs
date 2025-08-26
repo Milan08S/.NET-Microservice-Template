@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlantillaMicroservicio.Application.Features.Products;
+using PlantillaMicroservicio.Application.Features.Products.DTOs;
 using PlantillaMicroservicio.Domain.Entities;
 
 namespace PlantillaMicroservicio.Api.Controllers;
@@ -37,10 +38,10 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Product>> PostProduct(Product product)
+    public async Task<ActionResult> PostProduct(CreateProductDto createProductDto)
     {
-        await _productService.AddProductAsync(product);
-        return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
+        var createdProductId = await _productService.AddProductAsync(createProductDto);
+        return CreatedAtAction(nameof(GetProduct), new { id = createdProductId }, createProductDto);
     }
 
     [HttpPut("{id}")]
